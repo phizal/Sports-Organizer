@@ -1,0 +1,22 @@
+body{
+    padding:20px;
+    background-color:white;
+    color:black;
+}
+p{
+    color:blue;
+}
+.dark-mode {
+    background-color:  rgb(65, 65, 65);
+    color: white;
+}
+.align-right {
+    top: 10px;
+    text-align: right;
+    border: 0;
+}
+input[type=button] {
+ padding:10px;
+ margin:20px 0px;
+ border:1px solid;
+}

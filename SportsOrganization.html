@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Team Management Home</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" type = "text/css" href="styles.css" />
+    <script src="javascript.js"></script> 
+</head>
+<body>
+    <h1>
+        Sports Organizer
+    </h1>
+
+    <div class="align-right">
+        <button onclick="darkModeFunc()">Toggle Dark Mode</button>
+    </div>
+
+    <form>
+        <label for="sports">Select A Sport:</label>
+        <select name="sports" id="sports" onchange="updateSport()">
+            <option>Golf</option>
+            <option>Basketball</option>
+            <option>Football</option>
+            <option>Baseball</option>
+            <option>Soccer</option>
+            <option>Tennis</option>
+            <option>Cross Country</option>
+            <option>Swimming</option>
+        </select>
+    </form>
+
+    <form>
+        <label for="teams">Select A Team:</label>
+        <select name="teams" id="teams" onchange="updateTeam()">
+            <option>Team 1</option>
+            <option>Team 2</option>
+            <option>Team 3</option>
+            <option>Team 4</option>
+        </select>
+    </form>
+
+    <table  border="1" align="center">
+        <tr>
+        <td>First Name</td>
+        <td><input type="text" name="fname" id="fname"></td>
+        </tr>
+        <tr>
+        <td>Last Name</td>
+        <td><input type="text" name="lname" id="lname"></td>
+        </tr>
+        <tr>
+        <td>Age</td>
+        <td><input type="text" name="age" id="age"></td>
+        </tr>
+        <tr>
+        <td>Location</td>
+        <td><input type="text" name="location" id="location"></td>
+        </tr>
+        <td>Position</td>
+        <td><input type="text" name="position" id="position"></td>
+        </tr>
+
+        <tr>
+            <td>&nbsp</td>
+            <td align="center"><input type="button" value="Submit" name="add"  onClick="addRow()" id = "add"/></td>
+        </tr>
+    </table>
+            <table id = "players" width="500px" align="center" border=1> 
+                <tr style="background-color:#8FBC8F; color:black;">
+                    <td align="center"><b>First Name</b></td>
+                    <td align="center"><b>Last Name</b></td>
+                    <td align="center"><b>Age</b></td>
+                    <td align="center"><b>Location</b></td>
+                    <td align="center"><b>Position</b></td>
+                </tr> 
+                <tr>
+                    <td align="center">Tristan</td>
+                    <td align="center">Ainley</td>
+                    <td align="center">23</td>
+                    <td align="center">Knoxville</td>
+                    <td align="center">Catcher</td>
+                </tr>
+                <tr>
+                    <td align="center">John</td>
+                    <td align="center">Smith</td>
+                    <td align="center">22</td>
+                    <td align="center">New York City</td>
+                    <td align="center">First Base</td>
+                </tr>
+                <tr>
+                    <td align="center">David</td>
+                    <td align="center">Ortix</td>
+                    <td align="center">46</td>
+                    <td align="center">Boston</td>
+                    <td align="center">Designated Hitter</td>
+                </tr>                  
+                
+
+            </table>
+
+</body>
+</html>
