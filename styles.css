@@ -1,22 +1,86 @@
 body{
-    padding:20px;
-    background-color:white;
+    padding: 0 0;
+    margin: 0;
+    background-color: white;
     color:black;
+    
+}
+h1{
+    background-color: darksalmon;
+    padding: 30px 0 10px 30px;
+    margin: 0;
 }
 p{
     color:blue;
+    display: inline;
 }
 .dark-mode {
     background-color:  rgb(65, 65, 65);
     color: white;
+    right: 0;
 }
-.align-right {
-    top: 10px;
-    text-align: right;
-    border: 0;
+
+input[type="textC"] {
+    width: 200px;
 }
+
+.text-center {
+    text-align: center;
+}
+
+.darkbtn{
+    top: 50px;
+    text-align: right; 
+    right: 8px;
+    position:absolute;
+}
+
+button[type="editBtn"]{
+    padding-left: 7px;
+    padding-right: 7px;
+    margin:0px 10x;
+    border:1px solid;
+}
+
+button[type="delBtn"]{
+    padding-left: 7px;
+    padding-right: 7px;
+    margin:0px 13px;
+    border:1px solid;
+}
+
+button{
+    padding: 5px;
+    margin:0px 15px;
+    border:1px solid;
+}
+
 input[type=button] {
- padding:10px;
- margin:20px 0px;
+ padding:5px;
+ margin:10px 0px;
  border:1px solid;
 }
+
+.information{
+    width: 50%;
+    
+}
+
+.textbar{
+    width: 97%;
+    text-align: center;
+}
+
+
+footer {
+    margin-top: 10px ;
+    text-align: center;
+    padding: 50px 0;
+    background-color: DarkSalmon;
+    color: white;
+    /* height: 200px; */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    
+  }

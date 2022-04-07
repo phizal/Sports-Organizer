@@ -8,12 +8,13 @@
     <title>Document</title>
     <link rel = "stylesheet" type = "text/css" href="styles.css" />
     <script src="javascript.js"></script> 
+   
 </head>
 <header>
     <h1>
-         
+       
         <div class="darkmodebtn">
-            <p><left>Sports Organizer</left></p>
+            <p><left>Sports Organizer  &emsp; Contact</left></p>
             <button button="type" class="darkbtn" onclick="darkModeFunc()">Toggle Dark Mode</button>
         </div>
         
@@ -23,21 +24,30 @@
 
 
 <body>
-
+    <header>
+        <nav>
+            <ul>
+                <li><a href="SportsOrganization.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        
+    </header>
     <form>
         <label for="sports">Select A Sport:</label>
         <select name="sports" id="sports" onchange="updateSport()">
-            <option>Baseball</option>
-            <option>Basketball</option>
-            <option>Football</option>
-            <option>Golf</option>
-            <option>Soccer</option>
-            <option>Tennis</option>
-            <option>Cross Country</option>
-            <option>Swimming</option>
+            <option value="golf">Golf</option>
+            <option value="Basketball">Basketball</option>
+            <option value="Football">Football</option>
+            <option value="Baseball">Baseball</option>
+            <option value="Soccer">Soccer</option>
+            <option value="Tennis">Tennis</option>
+            <option value="Cross">Cross Country</option>
+            <option value="Swimming">Swimming</option>
         </select>
     </form>
-
+    
     <form>
         <label for="teams">Select A Team:</label>
         <select name="teams" id="teams" onchange="updateTeam()">
@@ -51,10 +61,10 @@
     <input class="textbar" type="textC" name="addColtxt" id="addColtxt">
     <input type="button" value="Add Column" name="addC"  onClick="addColumn()" id = "addC"/>
     <br>
-    <div class="text-center">
-        <button type="playerData" onclick="addRow()">Enter player data</button>
-    </div>
-    <!--<table class="information" border="1" align="center">
+    
+
+   
+    <table class="information" id="golf" border="1" align="center">
 
         <tr>
         <td>First Name</td>
@@ -80,51 +90,48 @@
             <td>&nbsp</td>
             <td align="center"><input type="button" value="Submit" name="add"  onClick="addRow()" id = "add"/></td>
         </tr>
-    </table>-->
+    </table>
     <br>
             <table class="tableback" id = "players"  align="center" border=1 style="width: 750px"> 
                 
-                <tr id = "row.header" style="background-color:#8FBC8F; color:black;">
-                    <th align="center" style="width: 30px">Edit</th>
-                    <th align="center">First Name</th>
-                    <th align="center">Last Name</th>
-                    <th align="center">Age</th>
-                    <th align="center"style="width: 175px">Location</th>
-                    <th align="center"style="width: 150px">Position</th>
-                    <th align="center"style="width: 50px">Delete</th>
-                </tr> 
+                    <tr style="background-color:#8FBC8F; color:black;">
+                        <th align="center"><b>First Name</b></th>
+                        <th align="center"><b>Last Name</b></th>
+                        <th align="center"><b>Age</b></th>
+                        <th align="center"style="width: 175px"><b>Location</b></th>
+                        <th align="center"style="width: 150px"><b>Position</b></th>
+                        <th align="center"style="width: 50px"><b>Delete</b></th>
+                    </tr> 
                 
-                <tr id = "row.1">
-                    <td align="center"><button type="editBtn" value = "Edit" id="editBtn" onclick="editPlay(this)">Edit</button></td>
+                <tr>
                     <td align="center">Tristan</td>
                     <td align="center">Ainley</td>
                     <td align="center">23</td>
                     <td align="center">Knoxville</td>
                     <td align="center">Catcher</td>
-                    <td align="center"> <button type="delBtn" value = "Delete" id="deleteBtn" onclick="delPlay(this)">X</button></td>
+                    <td align="center"> <button type="button" value = "Delete" id="deleteBtn" onclick="delPlay(this)">X</button></td>
                 </tr>
-                <tr id = "row.2">
-                    <td align="center"> <button type="editBtn" value = "Edit" id="editBtn" onclick="editPlay(this)">Edit</button></td>
+                <tr>
                     <td align="center">John</td>
                     <td align="center">Smith</td>
                     <td align="center">22</td>
                     <td align="center">New York City</td>
                     <td align="center">First Base</td>
-                    <td align="center"> <button type="delBtn" value = "Delete" id="deleteBtn" onclick="delPlay(this)">X</button></td>
+                    <td align="center"> <button type="button" value = "Delete" id="deleteBtn" onclick="delPlay(this)">X</button></td>
                 </tr>
-                <tr id = "row.3">
-                    <td align="center"> <button type="editBtn" value = "Edit" id="editBtn" onclick="editPlay(this)">Edit</button></td>
+                <tr id = "3">
                     <td align="center">David</td>
                     <td align="center">Ortix</td>
                     <td align="center">46</td>
                     <td align="center">Boston</td>
                     <td align="center">Designated Hitter</td>
-                    <td align="center"> <button type="delBtn" value = "Delete" id="deleteBtn" onclick="delPlay(this)">X</button></td>
+                    <td align="center"> <button type="button" value = "Delete" id="deleteBtn" onclick="delPlay(this)">X</button></td>
                 </tr>                  
                 
 
             </table>
-
+        
+        
 </body>
 <footer>
     <p><center>dwhite75 | phizal | tristan-ainley | derekgolfer97 &trade;</center><p>
