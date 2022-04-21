@@ -4,133 +4,210 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact Form</title>
+    <link rel = "stylesheet" type = "text/css" href="styles.css" />
     <script src="javascript.js"></script> 
-   
+    
     <style>
+        @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css);
+
         *{
-            padding:0;
+           
             margin: 0;
+            padding: 0;
             box-sizing: border-box;
-            outLine:none;
+            font-family: "Poppins", sans-serif;
         }
-        body{
-            font-family: 'Poppins', sans-serif;
-        }
-        .wrapper{
-            display:flex;
+        
+        
+        .content-section{
+
+            text-align: center;
+            width: 100%;
+            display: flex;
             justify-content: center;
-            flex-wrap:wrap;
-            padding: 70px 0;
-            max-width: 400 px;
-            margin: 0 auto;
+           
+        }
+        .contact-info{
+            text-align: center;
+            color: #fff;
+            max-width: 500 px;
+            padding-left: 50px;
+            font-size: 18px
+        }
+        .contact-info i{
+            text-align: center;
+            margin-right: 20px;
+            font-size: 25px;
+        }
+        .contact-form{
+            max-width: 700px;
+            margin-right: 50px;
+            text-align: center;
+            justify-content: center;
         }
 
-        .menu,
-        .content{
-            width: 50%;
+        .contact-info, .contact-form{
+            text-align: center;
+            flex: 0.6;
         }
-        select{
-            width: 50%;
-            padding:15px;
-            font: size 16px;
-            font-weight: 700;
-            font-family: 'Poppins', sans-serif;
+        .contact-form h2{
+            color: #fff;
+            text-align: center;
+            font-size: 35px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+        .contact-form .text-box{
+            
+            background-color: #000;
+            color: #fff;
             border: none;
-            border-radius: 8px;
-            border: 2px solid #3f51b5;
-            box-shadow: 0 15px 15px #efefef;
+            width: calc(50% - 10px);
+            padding: 12px;
+            font-size: 15px;
+            border-radius: 5px;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            opacity: 0.9;
         }
-        .content{
-            margin: 30px 0;
+        .contact-form .text-box:first-child{
+            margin-right: 15px;
         }
-        .content .data{
-            padding: 25px;
-            background-color: #fff;
-            border: 2px solid #8bc34a;
-            border-radius: 8px;
+        .contact-form textarea{
+            background: #000;
+            color: #fff;
+            border: none;
+            width: 100%;
+            padding: 12px;
+            font-size: 15px;
+            border-radius: 5px;
+            box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            opacity: 0.9;
         }
-        .content p{
-            margin-bottom: 15px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid gainsboro;
-        }
-        .content p:last_child{
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        } 
-        .content p b{
-            font-weight: 700;
-        }
-        .content p span{
+        .contact-form .snd-btn{
             float: right;
-            font-weight: normal;
+            background: #2E94E3;
+            color: #fff;
+            border: none;
+            width: 120px;
+            height: 40px;
+            font-size: 15px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            transition-property: background;
         }
-    .data{
-        display:none;
-    }
+        .contact-form .send-btn:hover{
+            background: #0582E3;
+        }
 
+        @media screen and (max-width: 950px){
+            .content-section{
+                flex-direction: column;
+            }
+        }
+
+        .contact-info, .contact-form{
+            margin: 30 px 50px;
+        }
+
+        .contact-form h2{
+            font-size: 30px;
+        }
+
+        .contact-form .text-box{
+            width: 100%;
+
+        }
+
+        .alert-success{
+            z-index: 1;
+            background: #D4EDDA;
+            font-size: 18px;
+            padding: 20px 40px;
+            min-width: 420px;
+            position: fixed;
+            text-align: center;
+            right: 0;
+            top: 10px;
+        }
+        .alert-error{
+            z-index: 1;
+            background: #FFF3CD;
+            font-size: 18px;
+            padding: 20px 40px;
+            min-width: 420px;
+            position: fixed;
+            text-align: center;
+            right: 0;
+            top: 10px;
+        }
     </style>
+   
+   
 </head>
+
 <header>
     <h1>
-       
         <div class="darkmodebtn">
             <p><left>Sports Organizer  &emsp; Contact</left></p>
             <button button="type" class="darkbtn" onclick="darkModeFunc()">Toggle Dark Mode</button>
         </div>
         
     </h1>
-</header>
 
-
-
-<body>
-    <header>
+    <div class = "row1">
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-          
+      
         </nav>
-    </header>
-    
-    <div class="wrapper">
-        <div class="menu">
-            <select id="name">
-                <option value="derek">Derek</option>
-                <option value="andrew">Andrew</option>
-                <option value="tristan">Tristan</option>
-            </select>
-        </div>
+    </div>
+</header>
+
+<body>
+
+    <!--alert messsages start
+    <div class="alert-success">
+        <span>Message Sent! Thank you for contacting us.</span>
+    </div>
+    <div class="alert-error">
+        <span>Something went wrong! Please try again.</span>
     </div>
 
-    <div class="content">
-        <div id="derek" class="data">
-            <p><b>First Name</b><span>Derek</span></p>
+    alert messages end-->
+    <!--contact section -->
+    <div  class = "div" class="contact-section">
+        <div class="contact-info">
+            <div><i class="fas fa-map-marker-alt"></i>Knoxville, Tennessee 37996</div>
+            <div><i class="fas fa-envelope"></i>dmubarak@vols.utk.edu</div>
+            <div><i class="fas fa-envelope"></i>tainley@vols.utk.edu</div>
+            <div><i class="fas fa-envelope"></i>dwhite75@vols.utk.edu</div>
+            <div><i class="fas fa-envelope"></i>Aphill81@vols.utk.edu</div>
+            <div><i class="fas fa-phone"></i>865-335-8346</div>
+            <div><i class="fas fa-clock"></i>Mon-Fri 8:00AM to 5:00PM</div>
         </div>
-        <div id="andrew" class="data">
-            <p><b>First Name</b><span>Andrew</span></p>
-        </div>
-        <div id="tristan" class="data">
-            <p><b>First Name</b><span>Tristan</span></p>
+
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form class="contact" action="" method="post">
+                <input type="text" name="name" class="text-box" placeholder="Your Name" required>
+                <input type="email" name="email" class="text-box" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <input type="submit" name="submit" class="send-btn" value="Send">
+            </form>
         </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
-    <script>
-        $(document).ready(function(){
-            $("#name").on('change', function(){
-                $(".data").hide();
-                $("#" + $(this).val()).fadeIn(700);
-           
-            }).change();
-            });
-        
-    </script>  
-        </body>       
+    <!--contact section end-->
+</body>       
 
          
 <footer>

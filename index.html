@@ -9,130 +9,465 @@
     <link rel = "stylesheet" type = "text/css" href="styles.css" />
     <script src="javascript.js"></script> 
 </head>
+
 <header>
     <h1>
-         
         <div class="darkmodebtn">
-            <p><left>Sports Organizer Home</left></p>
+            <p><left>Sports Organizer</left></p>
             <button button="type" class="darkbtn" onclick="darkModeFunc()">Toggle Dark Mode</button>
-        </div>
-        
+        </div> 
     </h1>
 </header>
 
+
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+    <div class="row1">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+          
+            </nav>
+        </header>
+    
+    
+        <form>
+            <label for="sports">Select A Sport:</label>
+            <select name="sports" id="sports" onchange="updateSport()">
+                <option value="baseball">Baseball</option>
+                <option value="basketball">Basketball</option>
+                <option value="football">Football</option>
+                <option value="golf">Golf</option>
+                <option value="soccer">Soccer</option>
+                <option value="tennis">Tennis</option>
+                <option value="country">Cross Country</option>
+                <option value="swimming">Swimming</option>
+            </select>
+        </form>
+    
+        <form>
+            <label for="teams">Select A Team:</label>
+            <select name="teams" id="teams" onchange="updateTeam()">
+                <option>Team 1</option>
+                <option>Team 2</option>
+                <option>Team 3</option>
+                <option>Team 4</option>
+            </select>
+        </form>
+    
+        <label for="addColtxt">New column text:</label>
+     
+        <input class="textbar" type="textC" name="addColtxt" id="addColtxt">
+        <input type="button" value="Add Column" name="addC"  onClick="addColumn()" id = "addC"/>
+        <input type="button" value="Save Current Table" name="savebtn"  onClick="save()" id = "savebtn"/>
+        <br>
         
-    </header>
-    <form>
-        <label for="sports">Select A Sport:</label>
-        <select name="sports" id="sports" onchange="updateSport()">
-            <option>Baseball</option>
-            <option>Basketball</option>
-            <option>Football</option>
-            <option>Golf</option>
-            <option>Soccer</option>
-            <option>Tennis</option>
-            <option>Cross Country</option>
-            <option>Swimming</option>
-        </select>
-    </form>
+        <div class="text-center">
+            <button type="playerData" id="subBtn" align="center">Enter player data</button>
+        </div>
+    </div> 
 
-    <form>
-        <label for="teams">Select A Team:</label>
-        <select name="teams" id="teams" onchange="updateTeam()">
-            <option>Team 1</option>
-            <option>Team 2</option>
-            <option>Team 3</option>
-            <option>Team 4</option>
-        </select>
-    </form>
-    <label for="addColtxt">New column text:</label>
-    <input class="textbar" type="textC" name="addColtxt" id="addColtxt">
-    <input type="button" value="Add Column" name="addC"  onClick="addColumn()" id = "addC"/>
-    <br>
-    <div class="text-center">
-        <button type="playerData" onclick="addRow()">Enter player data</button>
+    <div class="row2">
+
+        <br>
+        
+        <table class="tableback" id = "baseball" align="center" border=1 style="width: 75%;"> 
+                
+            <tr id = "row.header" style="background-color:#590256; color:white;">
+                <th align="center" style="width: 30px">Edit</th>
+                <th align="center" style="width: 50px">Delete</th>
+                <th align="center">First Name</th>
+                <th align="center">Last Name</th>
+                <th align="center">Age</th>
+                <th align="center" style="width: 175px">Location</th>
+                <th align="center" style="width: 150px">Position</th>
+            </tr> 
+                
+            <tr id = "row.1">
+                <td align="center"> <button type="editBtn" value = "Edit" id="editBtn" onclick="editPlay(this, this.closest('table').id)">Edit</button></td>
+                <td align="center"> <button type="delBtn" value = "Delete" id="deleteBtn" onclick="delPlay(this, this.closest('table').id)">X</button></td>
+                <td align="center">Tristan</td>
+                <td align="center">Ainley</td>
+                <td align="center">23</td>
+                <td align="center">Knoxville</td>
+                <td align="center">Catcher</td>
+            </tr>
+            <tr id = "row.2">
+                <td align="center"> <button type="editBtn" value = "Edit" id="editBtn" onclick="editPlay(this, this.closest('table').id)">Edit</button></td>
+                <td align="center"> <button type="delBtn" value = "Delete" id="deleteBtn" onclick="delPlay(this, this.closest('table').id)">X</button></td>
+                <td align="center">John</td>
+                <td align="center">Smith</td>
+                <td align="center">22</td>
+                <td align="center">New York City</td>
+                <td align="center">First Base</td>
+            </tr>
+            <tr id = "row.3">
+                <td align="center"> <button type="editBtn" value = "Edit" id="editBtn" onclick="editPlay(this, this.closest('table').id)">Edit</button></td>
+                <td align="center"> <button type="delBtn" value = "Delete" id="deleteBtn" onclick="delPlay(this, this.closest('table').id)">X</button></td>
+                <td align="center">David</td>
+                <td align="center">Ortix</td>
+                <td align="center">46</td>
+                <td align="center">Boston</td>
+                <td align="center">Designated Hitter</td>
+            </tr>                  
+                
+
+        </table>
+
+        <table class="tableback" id = "basketball" align="center" border=1 style="width: 75%;"> 
+                
+            <tr id = "row.header" style="background-color:#590256; color:white;">
+                <th align="center" style="width: 30px">Edit</th>
+                <th align="center" style="width: 50px">Delete</th>
+                <th align="center">First Name</th>
+                <th align="center">Last Name</th>
+                <th align="center">Age</th>
+                <th align="center" style="width: 175px">Location</th>
+                <th align="center" style="width: 150px">PPG</th>
+            </tr> 
+                
+            <tr id = "row.1">
+                <td align="center"> <button type="editBtn" value = "Edit" id="editBtn" onclick="editPlay(this, this.closest('table').id)">Edit</button></td>
+                <td align="center"> <button type="delBtn" value = "Delete" id="deleteBtn" onclick="delPlay(this, this.closest('table').id)">X</button></td>
+                <td align="center">Tristan</td>
+                <td align="center">Ainley</td>
+                <td align="center">23</td>
+                <td align="center">Knoxville</td>
+                <td align="center">20</td>
+            </tr>
+            <tr id = "row.2">
+                <td align="center"> <button type="editBtn" value = "Edit" id="editBtn" onclick="editPlay(this, this.closest('table').id)">Edit</button></td>
+                <td align="center"> <button type="delBtn" value = "Delete" id="deleteBtn" onclick="delPlay(this, this.closest('table').id)">X</button></td>
+                <td align="center">John</td>
+                <td align="center">Smith</td>
+                <td align="center">22</td>
+                <td align="center">New York City</td>
+                <td align="center">12</td>
+            </tr>
+            <tr id = "row.3">
+                <td align="center"> <button type="editBtn" value = "Edit" id="editBtn" onclick="editPlay(this, this.closest('table').id)">Edit</button></td>
+                <td align="center"> <button type="delBtn" value = "Delete" id="deleteBtn" onclick="delPlay(this, this.closest('table').id)">X</button></td>
+                <td align="center">David</td>
+                <td align="center">Ortix</td>
+                <td align="center">46</td>
+                <td align="center">Boston</td>
+                <td align="center">30</td>
+            </tr>                  
+                
+
+        </table>
+
+        <table class="tableback" id = "football" align="center" border=1 style="width: 75%;"> 
+                
+            <tr id = "row.header" style="background-color:#590256; color:white;">
+                <th align="center" style="width: 30px">Edit</th>
+                <th align="center" style="width: 50px">Delete</th>
+                <th align="center">First Name</th>
+                <th align="center">Last Name</th>
+                <th align="center">Age</th>
+                <th align="center" style="width: 175px">Location</th>
+                <th align="center" style="width: 150px">Touchdowns</th>
+            </tr> 
+                
+            <tr id = "row.1">
+                <td align="center"> <button type="editBtn" value = "Edit" id="editBtn" onclick="editPlay(this, this.closest('table').id)">Edit</button></td>
+                <td align="center"> <button type="delBtn" value = "Delete" id="deleteBtn" onclick="delPlay(this, this.closest('table').id)">X</button></td>
+                <td align="center">Tristan</td>
+                <td align="center">Ainley</td>
+                <td align="center">23</td>
+                <td align="center">Knoxville</td>
+                <td align="center">3</td>
+            </tr>
+            <tr id = "row.2">
+                <td align="center"> <button type="editBtn" value = "Edit" id="editBtn" onclick="editPlay(this, this.closest('table').id)">Edit</button></td>
+                <td align="center"> <button type="delBtn" value = "Delete" id="deleteBtn" onclick="delPlay(this, this.closest('table').id)">X</button></td>
+                <td align="center">John</td>
+                <td align="center">Smith</td>
+                <td align="center">22</td>
+                <td align="center">New York City</td>
+                <td align="center">2</td>
+            </tr>
+            <tr id = "row.3">
+                <td align="center"> <button type="editBtn" value = "Edit" id="editBtn" onclick="editPlay(this, this.closest('table').id)">Edit</button></td>
+                <td align="center"> <button type="delBtn" value = "Delete" id="deleteBtn" onclick="delPlay(this, this.closest('table').id)">X</button></td>
+                <td align="center">David</td>
+                <td align="center">Ortix</td>
+                <td align="center">46</td>
+                <td align="center">Boston</td>
+                <td align="center">1</td>
+            </tr>                  
+                
+
+        </table>
+
+        <table class="tableback" id = "golf" align="center" border=1 style="width: 75%;"> 
+                
+            <tr id = "row.header" style="background-color:#590256; color:white;">
+                <th align="center" style="width: 30px">Edit</th>
+                <th align="center" style="width: 50px">Delete</th>
+                <th align="center">First Name</th>
+                <th align="center">Last Name</th>
+                <th align="center">Age</th>
+                <th align="center" style="width: 175px">Location</th>
+                <th align="center" style="width: 150px">Scoring Average</th>
+            </tr> 
+                
+            <tr id = "row.1">
+                <td align="center"> <button type="editBtn" value = "Edit" id="editBtn" onclick="editPlay(this, this.closest('table').id)">Edit</button></td>
+                <td align="center"> <button type="delBtn" value = "Delete" id="deleteBtn" onclick="delPlay(this, this.closest('table').id)">X</button></td>
+                <td align="center">Tristan</td>
+                <td align="center">Ainley</td>
+                <td align="center">23</td>
+                <td align="center">Knoxville</td>
+                <td align="center">69</td>
+            </tr>
+            <tr id = "row.2">
+                <td align="center"> <button type="editBtn" value = "Edit" id="editBtn" onclick="editPlay(this, this.closest('table').id)">Edit</button></td>
+                <td align="center"> <button type="delBtn" value = "Delete" id="deleteBtn" onclick="delPlay(this, this.closest('table').id)">X</button></td>
+                <td align="center">John</td>
+                <td align="center">Smith</td>
+                <td align="center">22</td>
+                <td align="center">New York City</td>
+                <td align="center">72</td>
+            </tr>
+            <tr id = "row.3">
+                <td align="center"> <button type="editBtn" value = "Edit" id="editBtn" onclick="editPlay(this, this.closest('table').id)">Edit</button></td>
+                <td align="center"> <button type="delBtn" value = "Delete" id="deleteBtn" onclick="delPlay(this, this.closest('table').id)">X</button></td>
+                <td align="center">David</td>
+                <td align="center">Ortix</td>
+                <td align="center">46</td>
+                <td align="center">Boston</td>
+                <td align="center">85</td>
+            </tr>                 
+                
+        <table class="tableback" id = "soccer" align="center" border=1 style="width: 75%;"> 
+            
+            <tr id = "row.header" style="background-color:#590256; color:white;">
+                <th align="center" style="width: 30px">Edit</th>
+                <th align="center" style="width: 50px">Delete</th>
+                <th align="center">First Name</th>
+                <th align="center">Last Name</th>
+                <th align="center">Age</th>
+                <th align="center" style="width: 175px">Location</th>
+                <th align="center" style="width: 150px">Goals</th>
+            </tr> 
+                
+            <tr id = "row.1">
+                <td align="center"> <button type="editBtn" value = "Edit" id="editBtn" onclick="editPlay(this, this.closest('table').id)">Edit</button></td>
+                <td align="center"> <button type="delBtn" value = "Delete" id="deleteBtn" onclick="delPlay(this, this.closest('table').id)">X</button></td>
+                <td align="center">Tristan</td>
+                <td align="center">Ainley</td>
+                <td align="center">23</td>
+                <td align="center">Knoxville</td>
+                <td align="center">5</td>
+            </tr>
+            <tr id = "row.2">
+                <td align="center"> <button type="editBtn" value = "Edit" id="editBtn" onclick="editPlay(this, this.closest('table').id)">Edit</button></td>
+                <td align="center"> <button type="delBtn" value = "Delete" id="deleteBtn" onclick="delPlay(this, this.closest('table').id)">X</button></td>
+                <td align="center">John</td>
+                <td align="center">Smith</td>
+                <td align="center">22</td>
+                <td align="center">New York City</td>
+                <td align="center">7</td>
+            </tr>
+            <tr id = "row.3">
+                <td align="center"> <button type="editBtn" value = "Edit" id="editBtn" onclick="editPlay(this, this.closest('table').id)">Edit</button></td>
+                <td align="center"> <button type="delBtn" value = "Delete" id="deleteBtn" onclick="delPlay(this, this.closest('table').id)">X</button></td>
+                <td align="center">David</td>
+                <td align="center">Ortix</td>
+                <td align="center">46</td>
+                <td align="center">Boston</td>
+                <td align="center">2</td>
+            </tr>                  
+                
+
+        </table>
+
+        <table class="tableback" id = "tennis" align="center" border=1 style="width: 75%;"> 
+                
+            <tr id = "row.header" style="background-color:#590256; color:white;">
+                <th align="center" style="width: 30px">Edit</th>
+                <th align="center" style="width: 50px">Delete</th>
+                <th align="center">First Name</th>
+                <th align="center">Last Name</th>
+                <th align="center">Age</th>
+                <th align="center" style="width: 175px">Location</th>
+                <th align="center" style="width: 150px">Wins</th>
+            </tr> 
+                
+            <tr id = "row.1">
+                <td align="center"> <button type="editBtn" value = "Edit" id="editBtn" onclick="editPlay(this, this.closest('table').id)">Edit</button></td>
+                <td align="center"> <button type="delBtn" value = "Delete" id="deleteBtn" onclick="delPlay(this, this.closest('table').id)">X</button></td>
+                <td align="center">Tristan</td>
+                <td align="center">Ainley</td>
+                <td align="center">23</td>
+                <td align="center">Knoxville</td>
+                <td align="center">7</td>
+            </tr>
+            <tr id = "row.2">
+                <td align="center"> <button type="editBtn" value = "Edit" id="editBtn" onclick="editPlay(this, this.closest('table').id)">Edit</button></td>
+                <td align="center"> <button type="delBtn" value = "Delete" id="deleteBtn" onclick="delPlay(this, this.closest('table').id)">X</button></td>
+                <td align="center">John</td>
+                <td align="center">Smith</td>
+                <td align="center">22</td>
+                <td align="center">New York City</td>
+                <td align="center">5</td>
+            </tr>
+            <tr id = "row.3">
+                <td align="center"> <button type="editBtn" value = "Edit" id="editBtn" onclick="editPlay(this, this.closest('table').id)">Edit</button></td>
+                <td align="center"> <button type="delBtn" value = "Delete" id="deleteBtn" onclick="delPlay(this, this.closest('table').id)">X</button></td>
+                <td align="center">David</td>
+                <td align="center">Ortix</td>
+                <td align="center">46</td>
+                <td align="center">Boston</td>
+                <td align="center">4</td>
+            </tr>                  
+                
+
+        </table>
+
+        <table class="tableback" id = "country" align="center" border=1 style="width: 75%;"> 
+                
+            <tr id = "row.header" style="background-color:#590256; color:white;">
+                <th align="center" style="width: 30px">Edit</th>
+                <th align="center" style="width: 50px">Delete</th>
+                <th align="center">First Name</th>
+                <th align="center">Last Name</th>
+                <th align="center">Age</th>
+                <th align="center" style="width: 175px">Location</th>
+                <th align="center" style="width: 150px">Time</th>
+            </tr> 
+                
+            <tr id = "row.1">
+                <td align="center"> <button type="editBtn" value = "Edit" id="editBtn" onclick="editPlay(this, this.closest('table').id)">Edit</button></td>
+                <td align="center"> <button type="delBtn" value = "Delete" id="deleteBtn" onclick="delPlay(this, this.closest('table').id)">X</button></td>
+                <td align="center">Tristan</td>
+                <td align="center">Ainley</td>
+                <td align="center">23</td>
+                <td align="center">Knoxville</td>
+                <td align="center">1:35</td>
+            </tr>
+            <tr id = "row.2">
+                <td align="center"> <button type="editBtn" value = "Edit" id="editBtn" onclick="editPlay(this, this.closest('table').id)">Edit</button></td>
+                <td align="center"> <button type="delBtn" value = "Delete" id="deleteBtn" onclick="delPlay(this, this.closest('table').id)">X</button></td>
+                <td align="center">John</td>
+                <td align="center">Smith</td>
+                <td align="center">22</td>
+                <td align="center">New York City</td>
+                <td align="center">2:00</td>
+            </tr>
+            <tr id = "row.3">
+                <td align="center"> <button type="editBtn" value = "Edit" id="editBtn" onclick="editPlay(this, this.closest('table').id)">Edit</button></td>
+                <td align="center"> <button type="delBtn" value = "Delete" id="deleteBtn" onclick="delPlay(this, this.closest('table').id)">X</button></td>
+                <td align="center">David</td>
+                <td align="center">Ortix</td>
+                <td align="center">46</td>
+                <td align="center">Boston</td>
+                <td align="center">3:35</td>
+            </tr>                  
+                
+
+        </table>
+
+        <table class="tableback" id = "swimming" align="center" border=1 style="width: 75%;"> 
+                
+            <tr id = "row.header" style="background-color:#590256; color:white;">
+                <th align="center" style="width: 30px">Edit</th>
+                <th align="center" style="width: 50px">Delete</th>
+                <th align="center">First Name</th>
+                <th align="center">Last Name</th>
+                <th align="center">Age</th>
+                <th align="center" style="width: 175px">Location</th>
+                <th align="center" style="width: 150px">Wins</th>
+            </tr> 
+                
+            <tr id = "row.1">
+                <td align="center"> <button type="editBtn" value = "Edit" id="editBtn" onclick="editPlay(this, this.closest('table').id)">Edit</button></td>
+                <td align="center"> <button type="delBtn" value = "Delete" id="deleteBtn" onclick="delPlay(this, this.closest('table').id)">X</button></td>
+                <td align="center">Tristan</td>
+                <td align="center">Ainley</td>
+                <td align="center">23</td>
+                <td align="center">Knoxville</td>
+                <td align="center">4</td>
+            </tr>
+            <tr id = "row.2">
+                <td align="center"> <button type="editBtn" value = "Edit" id="editBtn" onclick="editPlay(this, this.closest('table').id)">Edit</button></td>
+                <td align="center"> <button type="delBtn" value = "Delete" id="deleteBtn" onclick="delPlay(this, this.closest('table').id)">X</button></td>
+                <td align="center">John</td>
+                <td align="center">Smith</td>
+                <td align="center">22</td>
+                <td align="center">New York City</td>
+                <td align="center">8</td>
+            </tr>
+            <tr id = "row.3">
+                <td align="center"> <button type="editBtn" value = "Edit" id="editBtn" onclick="editPlay(this, this.closest('table').id)">Edit</button></td>
+                <td align="center"> <button type="delBtn" value = "Delete" id="deleteBtn" onclick="delPlay(this, this.closest('table').id)">X</button></td>
+                <td align="center">David</td>
+                <td align="center">Ortix</td>
+                <td align="center">46</td>
+                <td align="center">Boston</td>
+                <td align="center">2</td>
+            </tr>                  
+                    
+    
+        </table>
+
+     
     </div>
-    <!--<table class="information" border="1" align="center">
 
-        <tr>
-        <td>First Name</td>
-        <td><input class="textbar" type="text" name="fname" id="fname"></td>
-        </tr>
-        <tr>
-        <td>Last Name</td>
-        <td><input class="textbar" type="text" name="lname" id="lname"></td>
-        </tr>
-        <tr>
-        <td>Age</td>
-        <td><input class="textbar" type="text" name="age" id="age"></td>
-        </tr>
-        <tr>
-        <td>Location</td>
-        <td><input class="textbar" type="text" name="location" id="location"></td>
-        </tr>
-        <tr>
-        <td>Position</td>
-        <td><input class="textbar" type="text" name="position" id="position"></td>
-        </tr>
-        <tr>
-            <td>&nbsp</td>
-            <td align="center"><input type="button" value="Submit" name="add"  onClick="addRow()" id = "add"/></td>
-        </tr>
-    </table>-->
-    <br>
-            <table class="tableback" id = "players"  align="center" border=1 style="width: 750px"> 
-                
-                <tr id = "row.header" style="background-color:#8FBC8F; color:black;">
-                    <th align="center" style="width: 30px">Edit</th>
-                    <th align="center">First Name</th>
-                    <th align="center">Last Name</th>
-                    <th align="center">Age</th>
-                    <th align="center"style="width: 175px">Location</th>
-                    <th align="center"style="width: 150px">Position</th>
-                    <th align="center"style="width: 50px">Delete</th>
-                </tr> 
-                
-                <tr id = "row.1">
-                    <td align="center"><button type="editBtn" value = "Edit" id="editBtn" onclick="editPlay(this)">Edit</button></td>
-                    <td align="center">Tristan</td>
-                    <td align="center">Ainley</td>
-                    <td align="center">23</td>
-                    <td align="center">Knoxville</td>
-                    <td align="center">Catcher</td>
-                    <td align="center"> <button type="delBtn" value = "Delete" id="deleteBtn" onclick="delPlay(this)">X</button></td>
-                </tr>
-                <tr id = "row.2">
-                    <td align="center"> <button type="editBtn" value = "Edit" id="editBtn" onclick="editPlay(this)">Edit</button></td>
-                    <td align="center">John</td>
-                    <td align="center">Smith</td>
-                    <td align="center">22</td>
-                    <td align="center">New York City</td>
-                    <td align="center">First Base</td>
-                    <td align="center"> <button type="delBtn" value = "Delete" id="deleteBtn" onclick="delPlay(this)">X</button></td>
-                </tr>
-                <tr id = "row.3">
-                    <td align="center"> <button type="editBtn" value = "Edit" id="editBtn" onclick="editPlay(this)">Edit</button></td>
-                    <td align="center">David</td>
-                    <td align="center">Ortix</td>
-                    <td align="center">46</td>
-                    <td align="center">Boston</td>
-                    <td align="center">Designated Hitter</td>
-                    <td align="center"> <button type="delBtn" value = "Delete" id="deleteBtn" onclick="delPlay(this)">X</button></td>
-                </tr>                  
-                
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
+    <script>
+        $(document).ready(function(){
+            $("#sports").on('change', function(){
+                $(".tableback").hide();
+                $("#" + $(this).val()).fadeIn(700);
+           
+            }).change();
+            });
+        
+    </script>  
 
+
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content" align="center">
+          <span class="close">&times;</span>
+          <table class="information" id="info" border="1" align="center" style=background-color:#E70185>
+                  <tr>
+                      <td>First Name</td>
+                      <td><input class="textbar" type="text" name="fname" id="fname"></td>
+                  </tr>
+                  <tr>
+                      <td>Last Name</td>
+                      <td><input class="textbar" type="text" name="lname" id="lname"></td>
+                  </tr>
+                  <tr>
+                      <td>Age</td>
+                      <td><input class="textbar" type="text" name="age" id="age"></td>
+                  </tr>
+                  <tr>
+                      <td>Location</td>
+                      <td><input class="textbar" type="text" name="location" id="location"></td>
+                      </tr>
+                  <tr>
+                      <td id="col5"><script src="js/Column.js"></script></td>
+                      <td><input class="textbar" type="text" name="col5in" id="col5in"></td>
+                  </tr>
+                  <script src="js/MoreColumn.js"></script>
             </table>
-
+            <input type="button"  value="Submit" name="add"  onClick="addRow()" id = "add"/>
+        </div>
+        
+      
+    </div>
+    <script src="js/SubmitModal.js"></script>
+  
 </body>
+
 <footer>
     <p><center>dwhite75 | phizal | tristan-ainley | derekgolfer97 &trade;</center><p>
 </footer>
