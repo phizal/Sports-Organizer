@@ -22,4 +22,28 @@ window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
+<<<<<<< Updated upstream
+=======
+  if (event.target == modalEd) {
+    modalEd.style.display = "none";
+  }
+  if (event.target == modalEd2) {
+    modalEd2.style.display = "none";
+  }
+}
+
+// Modal variables for our Edit modal
+var modalEd = document.getElementById("editModal");     
+var spanEd = document.getElementsByClassName("closeEd")[0];
+
+spanEd.onclick = function() {
+  modalEd.style.display = "none";
+}
+
+var modalEd2 = document.getElementById("editModal2");     
+var spanEd2 = document.getElementsByClassName("closeEd2")[0];
+
+spanEd2.onclick = function() {
+  modalEd2.style.display = "none";
+>>>>>>> Stashed changes
 }

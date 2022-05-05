@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel = "stylesheet" type = "text/css" href="styles.css" />
     <script src="javascript.js"></script> 
+<<<<<<< Updated upstream
 </head>
 
 <header>
@@ -19,16 +20,29 @@
     </h1>
 </header>
 
+=======
+    
+</head>
+
+>>>>>>> Stashed changes
 
 <body>
     <div class="row1">
         <header>
+<<<<<<< Updated upstream
             <nav>
+=======
+            <h1>
+                <p><left>Sports Organizer</left></p>
+            </h1>
+            <div id="nav">
+>>>>>>> Stashed changes
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
+<<<<<<< Updated upstream
           
             </nav>
         </header>
@@ -69,10 +83,64 @@
             <button type="playerData" id="subBtn" align="center">Enter player data</button>
         </div>
     </div> 
+=======
+            </div>
+        </header>
+    
+        <div id="parent">
+            <div id="narrow">
+                <form style = "margin-left: 10px"> 
+                    <label for="sports">Select A Sport:</label>
+                    <select name="sports" id="sports">
+                        <option value="baseball">Baseball</option>
+                        <option value="basketball">Basketball</option>
+                        <option value="football">Football</option>
+                    </select>
+                </form>
+            
+                <form style = "margin-left: 10px">
+                    <label for="teams">Select A Team:</label>
+                    <select name="teams" id="teams" onchange="updateTeam()">
+                        <option>Team 1</option>
+                        <option>Team 2</option>
+                        <option>Team 3</option>
+                        <option>Team 4</option>
+                    </select>
+                </form>
+                <button style="margin-top:10px" type="playerData" id="subBtn" align="center">Enter player data</button>
+            </div>
+            <div id="wide">
+                <label style = "margin-left: 10px" for="addColtxt">New column text:</label>
+            
+                <input class="textbar" type="textC" name="addColtxt" id="addColtxt">
+                <input type="button" value="Add Column" name="addC"  onClick="addColumn()" id = "addC"/>
+                
+            
+                <label style = "margin-left: 10px" for="sorttxt">Column to sort: </label>
+                <input class="textbar" type="textS" name="sorttxt" id="sorttxt">
+                <input type="button" value="Sort" name="sortbtn"  onClick="sort()" id = "sortbtn"/>
+                <br>
+
+                <form style = "margin-left: 10px" id="upload" type="button">
+                    <input id="file" type="file" accept=".json"/>
+                    <button id="upload">Upload</button>
+                    <input type="button" value="Save Current Table" name="savebtn"  onClick="save()" id = "savebtn"/>
+                    
+                </form>
+                
+                <script src="js/UploadFile.js"></script>
+            </div>
+        </div> 
+    </div>
+>>>>>>> Stashed changes
 
     <div class="row2">
 
         <br>
+<<<<<<< Updated upstream
+=======
+        <script src="js/EditPlayer.js"></script>
+>>>>>>> Stashed changes
         
         <table class="tableback" id = "baseball" align="center" border=1 style="width: 75%;"> 
                 
@@ -84,25 +152,47 @@
                 <th align="center">Age</th>
                 <th align="center" style="width: 175px">Location</th>
                 <th align="center" style="width: 150px">Position</th>
+<<<<<<< Updated upstream
             </tr> 
                 
             <tr id = "row.1">
                 <td align="center"> <button type="editBtn" value = "Edit" id="editBtn" onclick="editPlay(this, this.closest('table').id)">Edit</button></td>
+=======
+                <th align="center" style="width: 75px">At Bats</th>
+                <th align="center" style="width: 50px">Hits</th>
+                <th align="center" style="width: 50px">HR</th>
+                <th align="center" style="width: 50px">RBI</th>
+            </tr> 
+                
+            <tr id = "row.1">
+                <td align="center"> <button type="editBtn" value = "Edit" id="editBtn" onclick="updateRow(this, this.closest('table').id)">Edit</button></td>
+>>>>>>> Stashed changes
                 <td align="center"> <button type="delBtn" value = "Delete" id="deleteBtn" onclick="delPlay(this, this.closest('table').id)">X</button></td>
                 <td align="center">Tristan</td>
                 <td align="center">Ainley</td>
                 <td align="center">23</td>
                 <td align="center">Knoxville</td>
                 <td align="center">Catcher</td>
+<<<<<<< Updated upstream
             </tr>
             <tr id = "row.2">
                 <td align="center"> <button type="editBtn" value = "Edit" id="editBtn" onclick="editPlay(this, this.closest('table').id)">Edit</button></td>
+=======
+                <th align="center" style="font-weight:400">21</th>
+                <th align="center" style="font-weight:400">5</th>
+                <th align="center" style="font-weight:400">0</th>
+                <th align="center" style="font-weight:400">1</th>
+            </tr>
+            <tr id = "row.2">
+                <td align="center"> <button type="editBtn" value = "Edit" id="editBtn" onclick="updateRow(this, this.closest('table').id)">Edit</button></td>
+>>>>>>> Stashed changes
                 <td align="center"> <button type="delBtn" value = "Delete" id="deleteBtn" onclick="delPlay(this, this.closest('table').id)">X</button></td>
                 <td align="center">John</td>
                 <td align="center">Smith</td>
                 <td align="center">22</td>
                 <td align="center">New York City</td>
                 <td align="center">First Base</td>
+<<<<<<< Updated upstream
             </tr>
             <tr id = "row.3">
                 <td align="center"> <button type="editBtn" value = "Edit" id="editBtn" onclick="editPlay(this, this.closest('table').id)">Edit</button></td>
@@ -112,6 +202,25 @@
                 <td align="center">46</td>
                 <td align="center">Boston</td>
                 <td align="center">Designated Hitter</td>
+=======
+                <th align="center" style="font-weight:400">22</th>
+                <th align="center" style="font-weight:400">11</th>
+                <th align="center" style="font-weight:400">1</th>
+                <th align="center" style="font-weight:400">4</th>
+            </tr>
+            <tr id = "row.3">
+                <td align="center"> <button type="editBtn" value = "Edit" id="editBtn" onclick="updateRow(this, this.closest('table').id)">Edit</button></td>
+                <td align="center"> <button type="delBtn" value = "Delete" id="deleteBtn" onclick="delPlay(this, this.closest('table').id)">X</button></td>
+                <td align="center">David</td>
+                <td align="center">Ortiz</td>
+                <td align="center">46</td>
+                <td align="center">Boston</td>
+                <td align="center">Designated Hitter</td>
+                <th align="center" style="font-weight:400">537</th>
+                <th align="center" style="font-weight:400">169</th>
+                <th align="center" style="font-weight:400">38</th>
+                <th align="center" style="font-weight:400">127</th>
+>>>>>>> Stashed changes
             </tr>                  
                 
 
@@ -127,24 +236,46 @@
                 <th align="center">Age</th>
                 <th align="center" style="width: 175px">Location</th>
                 <th align="center" style="width: 150px">PPG</th>
+<<<<<<< Updated upstream
             </tr> 
                 
             <tr id = "row.1">
                 <td align="center"> <button type="editBtn" value = "Edit" id="editBtn" onclick="editPlay(this, this.closest('table').id)">Edit</button></td>
+=======
+                <th align="center" style="width: 50px">FG</th>
+                <th align="center" style="width: 50px">FGA</th>
+                <th align="center" style="width: 50px">3P</th>
+                <th align="center" style="width: 50px">3PA</th>
+            </tr> 
+                
+            <tr id = "row.1">
+                <td align="center"> <button type="editBtn" value = "Edit" id="editBtn" onclick="updateRow(this, this.closest('table').id)">Edit</button></td>
+>>>>>>> Stashed changes
                 <td align="center"> <button type="delBtn" value = "Delete" id="deleteBtn" onclick="delPlay(this, this.closest('table').id)">X</button></td>
                 <td align="center">Tristan</td>
                 <td align="center">Ainley</td>
                 <td align="center">23</td>
                 <td align="center">Knoxville</td>
                 <td align="center">20</td>
+<<<<<<< Updated upstream
             </tr>
             <tr id = "row.2">
                 <td align="center"> <button type="editBtn" value = "Edit" id="editBtn" onclick="editPlay(this, this.closest('table').id)">Edit</button></td>
+=======
+                <th align="center" style="font-weight:400">7</th>
+                <th align="center" style="font-weight:400">25</th>
+                <th align="center" style="font-weight:400">2</th>
+                <th align="center" style="font-weight:400">6</th>
+            </tr>
+            <tr id = "row.2">
+                <td align="center"> <button type="editBtn" value = "Edit" id="editBtn" onclick="updateRow(this, this.closest('table').id)">Edit</button></td>
+>>>>>>> Stashed changes
                 <td align="center"> <button type="delBtn" value = "Delete" id="deleteBtn" onclick="delPlay(this, this.closest('table').id)">X</button></td>
                 <td align="center">John</td>
                 <td align="center">Smith</td>
                 <td align="center">22</td>
                 <td align="center">New York City</td>
+<<<<<<< Updated upstream
                 <td align="center">12</td>
             </tr>
             <tr id = "row.3">
@@ -155,6 +286,26 @@
                 <td align="center">46</td>
                 <td align="center">Boston</td>
                 <td align="center">30</td>
+=======
+                <td align="center">13</td>
+                <th align="center" style="font-weight:400">5</th>
+                <th align="center" style="font-weight:400">9</th>
+                <th align="center" style="font-weight:400">1</th>
+                <th align="center" style="font-weight:400">3</th>
+            </tr>
+            <tr id = "row.3">
+                <td align="center"> <button type="editBtn" value = "Edit" id="editBtn" onclick="updateRow(this, this.closest('table').id)">Edit</button></td>
+                <td align="center"> <button type="delBtn" value = "Delete" id="deleteBtn" onclick="delPlay(this, this.closest('table').id)">X</button></td>
+                <td align="center">David</td>
+                <td align="center">Ortiz</td>
+                <td align="center">46</td>
+                <td align="center">Boston</td>
+                <td align="center">30</td>
+                <th align="center" style="font-weight:400">9</th>
+                <th align="center" style="font-weight:400">20</th>
+                <th align="center" style="font-weight:400">4</th>
+                <th align="center" style="font-weight:400">16</th>
+>>>>>>> Stashed changes
             </tr>                  
                 
 
@@ -169,6 +320,7 @@
                 <th align="center">Last Name</th>
                 <th align="center">Age</th>
                 <th align="center" style="width: 175px">Location</th>
+<<<<<<< Updated upstream
                 <th align="center" style="width: 150px">Touchdowns</th>
             </tr> 
                 
@@ -300,20 +452,43 @@
                 
             <tr id = "row.1">
                 <td align="center"> <button type="editBtn" value = "Edit" id="editBtn" onclick="editPlay(this, this.closest('table').id)">Edit</button></td>
+=======
+                <th align="center" style="width: 50px" >TD</th>
+                <th align="center" style="width: 75px">Rushing</th>
+                <th align="center" style="width: 50px">Yards</th>
+                <th align="center" style="width: 75px">Receiving</th>
+                <th align="center" style="width: 50px">Yards</th>
+            </tr> 
+                
+            <tr id = "row.1">
+                <td align="center"> <button type="editBtn" value = "Edit" id="editBtn" onclick="updateRow(this, this.closest('table').id)">Edit</button></td>
+>>>>>>> Stashed changes
                 <td align="center"> <button type="delBtn" value = "Delete" id="deleteBtn" onclick="delPlay(this, this.closest('table').id)">X</button></td>
                 <td align="center">Tristan</td>
                 <td align="center">Ainley</td>
                 <td align="center">23</td>
                 <td align="center">Knoxville</td>
+<<<<<<< Updated upstream
                 <td align="center">7</td>
             </tr>
             <tr id = "row.2">
                 <td align="center"> <button type="editBtn" value = "Edit" id="editBtn" onclick="editPlay(this, this.closest('table').id)">Edit</button></td>
+=======
+                <td align="center">0</td>
+                <th align="center" style="font-weight:400">10</th>
+                <th align="center" style="font-weight:400">45</th>
+                <th align="center" style="font-weight:400">1</th>
+                <th align="center" style="font-weight:400">3</th>
+            </tr>
+            <tr id = "row.2">
+                <td align="center"> <button type="editBtn" value = "Edit" id="editBtn" onclick="updateRow(this, this.closest('table').id)">Edit</button></td>
+>>>>>>> Stashed changes
                 <td align="center"> <button type="delBtn" value = "Delete" id="deleteBtn" onclick="delPlay(this, this.closest('table').id)">X</button></td>
                 <td align="center">John</td>
                 <td align="center">Smith</td>
                 <td align="center">22</td>
                 <td align="center">New York City</td>
+<<<<<<< Updated upstream
                 <td align="center">5</td>
             </tr>
             <tr id = "row.3">
@@ -413,6 +588,28 @@
             </tr>                  
                     
     
+=======
+                <td align="center">4</td>
+                <th align="center" style="font-weight:400">2</th>
+                <th align="center" style="font-weight:400">21</th>
+                <th align="center" style="font-weight:400">56</th>
+                <th align="center" style="font-weight:400">683</th>
+            </tr>
+            <tr id = "row.3">
+                <td align="center"> <button type="editBtn" value = "Edit" id="editBtn" onclick="updateRow(this, this.closest('table').id)">Edit</button></td>
+                <td align="center"> <button type="delBtn" value = "Delete" id="deleteBtn" onclick="delPlay(this, this.closest('table').id)">X</button></td>
+                <td align="center">Ezekiel</td>
+                <td align="center">Elliott</td>
+                <td align="center">26</td>
+                <td align="center">Dallas</td>
+                <td align="center" style="font-weight:400">11</td>
+                <th align="center" style="font-weight:400">237</th>
+                <th align="center" style="font-weight:400">1002</th>
+                <th align="center" style="font-weight:400">47</th>
+                <th align="center" style="font-weight:400">287</th>
+            </tr>                  
+                
+>>>>>>> Stashed changes
         </table>
 
      
@@ -435,6 +632,7 @@
 
         <!-- Modal content -->
         <div class="modal-content" align="center">
+<<<<<<< Updated upstream
           <span class="close">&times;</span>
           <table class="information" id="info" border="1" align="center" style=background-color:#E70185>
                   <tr>
@@ -464,6 +662,99 @@
         
       
     </div>
+=======
+            <span class="close">&times;</span>
+            <table class="information" id="info" border="1" align="center" style=background-color:#E70185>
+                <tr>
+                    <td>First Name</td>
+                    <td><input class="textbar" type="text" name="fname" id="fname"></td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td><input class="textbar" type="text" name="lname" id="lname"></td>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td><input class="textbar" type="text" name="age" id="age"></td>
+                </tr>
+                <tr>
+                    <td>Location</td>
+                    <td><input class="textbar" type="text" name="location" id="location"></td>
+                </tr>
+                <tr>
+                    <td id="col5"><script src="js/Column.js"></script></td>
+                    <td><input class="textbar" type="text" name="col5in" id="col5in"></td>
+                </tr>
+                <tr>
+                    <td id="col6"><script>
+                        totAdded++;
+                        var col = document.getElementById('col6');
+                        col.innerHTML = table.rows[0].cells[totAdded].innerHTML;
+                    </script></td>
+                    <td><input class="textbar" type="text" name="col6in" id="col6in"></td>
+                </tr>
+                <tr>
+                    <td id="col7"><script>
+                        totAdded++;
+                        var col = document.getElementById('col7');
+                        col.innerHTML = table.rows[0].cells[totAdded].innerHTML;
+                    </script></td>
+                    <td><input class="textbar" type="text" name="col7in" id="col7in"></td>
+                </tr>
+                <tr>
+                    <td id="col8"><script>
+                        totAdded++;
+                        var col = document.getElementById('col8');
+                        col.innerHTML = table.rows[0].cells[totAdded].innerHTML;
+                    </script></td>
+                    <td><input class="textbar" type="text" name="col8in" id="col8in"></td>
+                </tr>
+                <tr>
+                    <td id="col9"><script>
+                        totAdded++;
+                        var col = document.getElementById('col9');
+                        col.innerHTML = table.rows[0].cells[totAdded].innerHTML;
+                    </script></td>
+                    <td><input class="textbar" type="text" name="col9in" id="col9in"></td>
+                </tr>
+                <script src="js/MoreColumn.js"></script>
+            </table>
+            <input type="button"  value="Submit" name="add"  onClick="addRow()" id = "add"/>
+        </div>  
+    </div>
+    
+
+    <div id="editModal" class="modalEd">
+
+        <div class="modal-contentEd" align="center">
+            <span class="closeEd">&times;</span>
+            <table class="editTable" id="editTable" border="1" align="center" style=background-color:#E70185>
+                <tr>
+                    <td>First Name</td>
+                    <td><input class="textbar" type="text" name="fname" id="fname1"></td>
+                </tr>
+            </table>
+            <input type="button"  value="Edit" name="edit"  onClick="editPlayer()" id = "edit"/>
+        </div>
+      
+    </div>
+
+    <div id="editModal2" class="modalEd2">
+
+        <div class="modal-contentEd2" align="center">
+            <span class="closeEd2">&times;</span>
+            <table class="editTable2" id="editTable2" border="1" align="center" style=background-color:#E70185>
+                <tr>
+                    <td>First Name</td>
+                    <td><input class="textbar" type="text" name="fname" id="fname2"></td>
+                </tr>
+            </table>
+            <input type="button"  value="Edit" name="edit"  onClick="editPlayerApp()" id = "edit"/>
+        </div>
+      
+    </div>
+    <script src="js/EditPlayer.js"></script>
+>>>>>>> Stashed changes
     <script src="js/SubmitModal.js"></script>
   
 </body>
