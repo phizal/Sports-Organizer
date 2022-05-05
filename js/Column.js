@@ -1,31 +1,13 @@
-<<<<<<< Updated upstream
-=======
 var totAdded = 6;
->>>>>>> Stashed changes
 var select = document.getElementById('sports');
 var val = select.options[select.selectedIndex].value;
 var table = document.getElementById(val);
 var col5 = document.getElementById('col5');
-<<<<<<< Updated upstream
-col5.innerHTML = table.rows[0].cells[6].innerHTML;
-=======
 col5.innerHTML = table.rows[0].cells[totAdded].innerHTML;
->>>>>>> Stashed changes
 
 document.addEventListener('input', function (event) {
 
 	if (event.target.id !== 'sports') return;
-<<<<<<< Updated upstream
-    else {
-		select = document.getElementById('sports');
-        val = select.options[select.selectedIndex].value;
-        table = document.getElementById(val);
-        col5 = document.getElementById('col5');
-        col5.innerHTML = table.rows[0].cells[6].innerHTML;
-	}
-}, false);
-
-=======
   else {
 		select = document.getElementById('sports');
     val = select.options[select.selectedIndex].value;
@@ -40,4 +22,3 @@ activities.addEventListener('change', function () {
     entryVar = false;
 }, false);
 
->>>>>>> Stashed changes

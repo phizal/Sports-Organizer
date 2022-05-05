@@ -22,8 +22,6 @@ window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
-<<<<<<< Updated upstream
-=======
   if (event.target == modalEd) {
     modalEd.style.display = "none";
   }
@@ -45,5 +43,4 @@ var spanEd2 = document.getElementsByClassName("closeEd2")[0];
 
 spanEd2.onclick = function() {
   modalEd2.style.display = "none";
->>>>>>> Stashed changes
 }

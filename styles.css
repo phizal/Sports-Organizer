@@ -8,13 +8,9 @@ body{
     background-attachment: fixed;
     background-position: center;
 }
-<<<<<<< Updated upstream
-.information{
-=======
 .information,
 .editTable,
 .editTable2{
->>>>>>> Stashed changes
     background-color: rgb(86, 70, 92);
     padding: 10px;
     
@@ -24,11 +20,6 @@ body{
 .row1{
     margin-bottom: 25px;
     background-color: #E70185;
-<<<<<<< Updated upstream
-}
-.row2{
-    margin-bottom: 25px;
-=======
     position: sticky;
     top: 0;
     padding-bottom: 1px;
@@ -52,7 +43,6 @@ body{
     flex: 1;
     /* Grow to rest of container */
     /* Just so it's visible */
->>>>>>> Stashed changes
 }
 .tableback{
     background-color:#E70185; 
@@ -74,33 +64,6 @@ h1{
 p{
     color:white;
     display: inline;
-<<<<<<< Updated upstream
-}
-.p1{
-    color:black;
-    display: inline;
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-bottom: 40px;
-}
-.dark-mode {
-    background-color:  rgb(65, 65, 65);
-    color: white;
-    right: 0;
-}
-
-input[type="textC"] {
-    width: 200px;
-}
-
-.darkbtn{
-    top: 50px;
-    text-align: right; 
-    right: 8px;
-    position:absolute;
-}
-
-=======
 }
 .p1{
     color:black;
@@ -119,7 +82,6 @@ input[type="textS"] {
     width: 200px;
 }
 
->>>>>>> Stashed changes
 button[type="editBtn"]{
     padding-left: 7px;
     padding-right: 7px;
@@ -127,7 +89,6 @@ button[type="editBtn"]{
     border:1px solid;
     background-color:#c4c4c4; 
     color:black;
-<<<<<<< Updated upstream
 }
 
 button[type="delBtn"]{
@@ -139,19 +100,6 @@ button[type="delBtn"]{
     color:black;
 }
 
-=======
-}
-
-button[type="delBtn"]{
-    padding-left: 7px;
-    padding-right: 7px;
-    margin:0px 13px;
-    border:1px solid;
-    background-color:#c4c4c4; 
-    color:black;
-}
-
->>>>>>> Stashed changes
 button{
     padding: 5px;
     margin:0px 15px;
@@ -165,8 +113,6 @@ input[type=button] {
 }
 
 
-<<<<<<< Updated upstream
-=======
 #nav {
     list-style: none;
     font-weight: bold;
@@ -206,7 +152,6 @@ input[type=button] {
     background-color: #590256;
 }
 
->>>>>>> Stashed changes
 .textbar{
     width: 97%;
     text-align: center;
@@ -216,11 +161,7 @@ input[type=button] {
 footer {
     margin-top: 10px ;
     text-align: center;
-<<<<<<< Updated upstream
-    padding: 50px 0;
-=======
     padding: 30px 0;
->>>>>>> Stashed changes
     background: linear-gradient(#E70185, #590256) !important;
     color: white;
     /* height: 200px; */
@@ -229,13 +170,9 @@ footer {
     width: 100%;
 }
 
-<<<<<<< Updated upstream
-.modal {
-=======
 .modal,
 .modalEd,
 .modalEd2 {
->>>>>>> Stashed changes
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -250,13 +187,9 @@ footer {
 }
 
 /* Modal Content */
-<<<<<<< Updated upstream
-.modal-content {
-=======
 .modal-content,
 .modal-contentEd,
 .modal-contentEd2 {
->>>>>>> Stashed changes
   background-color: #590256;
   margin: auto;
   padding: 20px;
@@ -265,13 +198,9 @@ footer {
 }
 
 /* The Close Button */
-<<<<<<< Updated upstream
-.close {
-=======
 .close,
 .closeEd,
 .closeEd2 {
->>>>>>> Stashed changes
   color: #aaaaaa;
   float: right;
   font-size: 28px;
@@ -279,21 +208,14 @@ footer {
 }
 
 .close:hover,
-<<<<<<< Updated upstream
-.close:focus {
-=======
 .close:focus,
 .closeEd:hover,
 .closeEd:focus,
 .closeEd2:hover,
 .closeEd2:focus {
->>>>>>> Stashed changes
   color: #000;
   text-decoration: none;
   cursor: pointer;
 }
 
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes

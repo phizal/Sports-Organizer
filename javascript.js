@@ -1,73 +1,6 @@
 /*window.onload = function() {
     document.getElementById('basketball').style.display = "none";
 }*/
-<<<<<<< Updated upstream
-
-//download function from: https://attacomsian.com/blog/javascript-download-file
-const download = (path, filename) => {
-    // Create a new link
-    const anchor = document.createElement('a');
-    anchor.href = path;
-    anchor.download = filename;
-
-    // Append to the DOM
-    document.body.appendChild(anchor);
-
-    // Trigger `click` event
-    anchor.click();
-
-    // Remove element from DOM
-    document.body.removeChild(anchor);
-};
-
-function save(){
-    var select = document.getElementById("sports");
-    var val = select.options[select.selectedIndex].value;
-    var table = document.getElementById(val);
-    var saveArr = new Array(rowTot+1);
-
-    for(var i = 0; i < rowTot+1; i++){
-        //populate array
-        saveArr[i] = new Array(colTot-2);
-        for(var j = 0; j < colTot-2; j++)
-        {
-            saveArr[i][j] = table.rows[i].cells[j+2].innerHTML;
-            console.log(table.rows[i].cells[j+2].innerHTML);
-        }
-    }
-    //turn saveArr into JSON and save to local storage
-    const saveFile = JSON.stringify(saveArr);
-    console.log(saveFile);
-    //create data blob
-    const blob = new Blob([saveFile], {type : 'application/json'});
-    //create download link
-    const url = URL.createObjectURL(blob);
-    //start download
-    download(url, "SportsOrganizerDownload.JSON");
-    //clean up
-    URL.revokeObjectURL(url);
-}
-
-/*function updateSport() {
-    
-
-    var sportddl = document.getElementById("sports");
-    var sport = sportddl.options[sportddl.selectedIndex].text;   
-    
-
-
-   /* if (sport == "Basketball")
-    {
-        document.getElementById('basketball').style.display = '';
-        document.getElementById('golf').style.display = "none";
-    }
-    else{
-        document.getElementById('golf').style.display = '';
-        document.getElementById('basketball').style.display = "none";
-    }
-    alert(sport + " has been selected!");
-}*/
-=======
 
 //download function from: https://attacomsian.com/blog/javascript-download-file
 const download = (path, filename) => {
@@ -159,7 +92,6 @@ function sort(){
         }
     }
 }
->>>>>>> Stashed changes
 
 function save(){
     var select = document.getElementById("sports");
@@ -197,10 +129,6 @@ function updateTeam() {
 }
 
 
-<<<<<<< Updated upstream
- 
-=======
->>>>>>> Stashed changes
 function delButton(row, tableid){
     var btn = document.createElement('button');
     btn.type = "delBtn";
@@ -227,27 +155,16 @@ function delPlayApp(idVal,tableid) {
 
 function delPlay(r,tableid) {
     var i = r.parentNode.parentNode.rowIndex;
-<<<<<<< Updated upstream
-     document.getElementById(tableid).deleteRow(i);
-}
-
-function editButton(row,tableid){
-=======
     document.getElementById(tableid).deleteRow(i);
 }
 
 function editButton(row,tableid){
     console.log("OOOOOOOOOOOOOOOOOOOOOOO");
->>>>>>> Stashed changes
     var btn = document.createElement('button');
     btn.type = "editBtn";
     btn.className = "btn";
     btn.innerHTML= "Edit";
-<<<<<<< Updated upstream
-    btn.addEventListener("click", function() { editPlayApp(row.id,tableid); });
-=======
     btn.addEventListener("click", function() { updateRowApp(row.id,tableid); });
->>>>>>> Stashed changes
     btn.style.textAlign = "center";
     var tdbtn = document.createElement("td");
     tdbtn.appendChild(btn);
@@ -255,56 +172,6 @@ function editButton(row,tableid){
     return row;
 }
 
-<<<<<<< Updated upstream
-function editPlay(r,tableid) {
-    var table = document.getElementById(tableid);
-    var row = r.parentNode.parentNode.rowIndex;
-
-    for(var i = 2; i < table.rows[0].cells.length; i+=1){
-        var initVal = table.rows[row].cells[i].innerHTML;
-        var newVal = prompt(table.rows[0].cells[i].innerHTML, initVal);
-        if (newVal == null || newVal == "") {
-            console.log("User cancelled the prompt.");
-            break;
-        } else if(i == 4){
-            newVal = numValid(newVal);
-            if(newVal != null && newVal != ""){
-                table.rows[row].cells[i].innerHTML = newVal;
-            }
-        } else {
-            table.rows[row].cells[i].innerHTML = newVal;
-        }
-    }
-}
-
-function editPlayApp(idVal,tableid) {
-    var table = document.getElementById(tableid);
-    for (i = 1; i < table.rows.length; i++) {
-        currRow = table.rows[i];  
-        if(currRow.id == idVal){
-            for(var j = 2; j < table.rows[0].cells.length; j+=1){
-                var initVal = table.rows[i].cells[j].innerHTML;
-                var newVal = prompt(table.rows[0].cells[j].innerHTML, initVal);
-                if (newVal == null || newVal == "") {
-                    console.log("User cancelled the prompt.");
-                    break;
-                }
-                else if(j == 4){
-                    newVal = numValid(newVal);
-                    if(newVal != null && newVal != ""){
-                        table.rows[i].cells[j].innerHTML = newVal;
-                    }
-                } 
-                else {
-                    table.rows[i].cells[j].innerHTML = newVal;
-                }
-            } 
-            break;
-        }
-    }
-}
-=======
->>>>>>> Stashed changes
 
 function numValid(currNum){
     age = parseInt(currNum);
@@ -315,34 +182,8 @@ function numValid(currNum){
     return currNum;
 }
 
-<<<<<<< Updated upstream
-var arr = new Array();
-/*function addData(){
-    getData();
-    arr.push({
-        fname:document.getElementById("fname").value,
-        lname:document.getElementById("lname").value,
-        age:document.getElementById("age").value,
-        location:document.getElementById("location").value,
-        position:document.getElementById("position").value
-    })
-
-    localStorage.setItem("localData", JSON.stringify(arr));
-    addRow();
-}
-
-function getData(){
-    var str = localStorage.getItem("localData");
-    if (str != null){
-        arr = JSON.parse(str);
-    }
-}*/
-
-var rowTot = 3;
-=======
 var rowTot = 4;
 var entryVar = true;
->>>>>>> Stashed changes
 
 function addRow() {
     "use strict";
@@ -350,10 +191,6 @@ function addRow() {
     var select = document.getElementById('sports');
     var val = select.options[select.selectedIndex].value;
  
-<<<<<<< Updated upstream
-    rowTot += 1;
-=======
->>>>>>> Stashed changes
     
 
     var table = document.getElementById(val);
@@ -376,22 +213,6 @@ function addRow() {
         if(k == 2){
             if(checkNum(td3)){return;}
         }
-<<<<<<< Updated upstream
-    }
-
-    document.getElementById("fname").value = "";
-    document.getElementById("lname").value = "";
-    document.getElementById("age").value = "";
-    document.getElementById("location").value = "";
-    document.getElementById("col5in").value = "";
-
-    for(k = 0; k < rowArray.length; k++){
-        rowArray[k].style.textAlign = "center";
-    }
-
-    row.id = val +  "." + rowTot;
-
-=======
         if(k == 4 && (val =='basketball'|| val =='football')){
             if(isNaN(td5.innerHTML)){
                 window.alert("Please enter a valid number.");
@@ -407,7 +228,6 @@ function addRow() {
     row.id = "row" + val +  "." + rowTot;
     rowTot += 1;
 
->>>>>>> Stashed changes
     row = editButton(row,val);
     row = delButton(row,val);
 
@@ -417,16 +237,6 @@ function addRow() {
     row.appendChild(td4);
     row.appendChild(td5);
 
-<<<<<<< Updated upstream
-    var int2 = 0;
-    var loop = 7;
-    while(loop < colTot){
-        var td6 = document.createElement("td");
-        var currCol = "val" + int2;
-        td6.innerHTML = document.getElementById(currCol).value
-        td6.style.textAlign = "center";
-        document.getElementById(currCol).value = "";
-=======
     var int2 = 7;
     var loop = 7;
     var untilLoop = 0;
@@ -467,65 +277,10 @@ function addRow() {
         }
         td6.style.textAlign = "center";
         
->>>>>>> Stashed changes
         int2++;
         row.appendChild(td6);
         loop++;
     }
-<<<<<<< Updated upstream
-    
-    table.children[0].appendChild(row);
-
-}
-
-function checkInput(currRow){
-    if(currRow.innerHTML == ""){
-        window.alert("Please ensure all values are filled.")
-        return true;
-    }
-    return false;
-}
-
-function checkNum(currRow){
-    if(isNaN(currRow.innerHTML)){
-        window.alert("Please enter a valid number for the player's age.");
-        return true;
-    }
-    age = parseInt(currRow.innerHTML);
-    if(age < 0 || age >= 100){
-        window.alert("Please enter a valid number between 0 and 100 for the player's age.");
-        return true;
-    }
-    return false;
-}
-
-var colTot = 7;
-
-function addColumn() {
-    "use strict";
-
-    var select = document.getElementById('sports');
-    var val = select.options[select.selectedIndex].value;
-
-    colTot += 1;
-    var newCol = document.getElementById("addColtxt").value;
-    if(newCol == ""){
-        return;
-    }
-    var table = document.getElementById(val);
-    var colHead = table.rows[0].insertCell(-1)
-    colHead.innerHTML = newCol;
-    colHead.className = "cellInsert";
-    document.getElementById("addColtxt").value = "";
-
-    for (var i = 1; i < table.rows.length; i++) {
-        var temp = table.rows[i].insertCell(-1);
-        temp.className = "cellInsert";
-        temp.innerHTML = "N/A";
-    }
-    console.log(colTot);
-};
-=======
 
     // Clears all of the values from the submit modal cy going through the intial preset 5 and following cells added later
     document.getElementById("fname").value = "";
@@ -548,7 +303,6 @@ function addColumn() {
     }
 
     table.children[0].appendChild(row);
->>>>>>> Stashed changes
 
     var modal= document.getElementById("myModal");
     modal.style.display = "none";
